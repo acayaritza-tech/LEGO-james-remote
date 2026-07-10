@@ -13,7 +13,7 @@ async function connectHub() {
         statusText.innerText = "Requesting Bluetooth device...";
 
         bleDevice = await navigator.bluetooth.requestDevice({
-            acceptAllDevices: True
+            acceptAllDevices: true,
             optionalServices: [NUS_SERVICE_UUID]
         });
 
