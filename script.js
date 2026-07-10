@@ -13,7 +13,8 @@ async function connectHub() {
         statusText.innerText = "Requesting Bluetooth device...";
 
         bleDevice = await navigator.bluetooth.requestDevice({
-            filters: [{ services: [NUS_SERVICE_UUID] }]
+            acceptAllDevices: True
+            optionalServices: [NUS_SERVICE_UUID]
         });
 
         statusText.innerText = "Connecting to GATT Server...";
